@@ -1,0 +1,277 @@
+@import "https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css";
+
+.bg-super-white { background: #f9f9f9; }
+.top-50 { top: 50% }
+.pointers { pointer-events: auto; }
+.no-pointers { pointer-events: none; }
+
+a, .as-link {
+  color: #269;
+}
+.link {
+  color: #269;
+}
+.link:hover { background: url(/images/line.png) repeat-x left bottom; }
+
+pre.code {
+  font-family: monospace;
+  font-size: 1.15em;
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+
+.favorite {
+  float: left;
+  margin-left: -16px;
+  margin-top: 2px;
+}
+
+.posts-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.posts-divider span {
+  background:#fff;
+  padding:0 10px;
+  color: #888;
+  font-size: 85%;
+  vertical-align: top;
+}
+
+.datetime {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  width: 130px;
+  text-transform: uppercase;
+  float: right;
+  color: #999;
+  text-align: right;
+}
+
+.mw75 {
+  max-width:50rem
+}
+
+body main {
+  padding: 30px 60px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body main {
+    padding: 20px 20px;
+  }
+}
+
+code {
+  font-family: monospace;
+  font-size: 1.15em;
+}
+/* version with line numbers */
+code table {
+  width: 100%;
+}
+td.gutter, td.code {
+  font-family: monospace;
+  font-size: 0.8em;
+}
+
+/* Markdown styles */
+
+.markdown-body a {
+  text-decoration: none;
+  color: #269;
+}
+.markdown-body .highlighter-rouge {
+  padding: .25rem .5rem;
+}
+.markdown-body pre {
+  margin: 0;
+  overflow: auto;
+}
+.markdown-body > .highlighter-rouge {
+  border: 0;
+  border-top: 1px dotted #CCC;
+  border-bottom: 1px dotted #CCC;
+}
+.markdown-body > hr {
+  border: 0;
+  border-bottom: 1px dotted #CCC;
+}
+.markdown-body blockquote {
+  margin: 0;
+  background: #f9f9f9;
+  padding-left: 3.8rem;
+}
+.markdown-body blockquote, .markdown-body > p blockquote {
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  -ms-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+  color: #606060;
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding: 15px 60px;
+}
+.markdown-body blockquote:hover, .markdown-body > p blockquote:hover {
+  color: #454545;
+}
+.markdown-body blockquote:hover:before, .markdown-body > p blockquote:hover:before {
+  color: #b8cec7;
+}
+.markdown-body blockquote:before, .markdown-body > p blockquote:before {
+  left: -3px;
+}
+.markdown-body blockquote:after, .markdown-body > p blockquote:after {
+  right: -2px;
+}
+.markdown-body blockquote:before, .markdown-body blockquote:after, section > p blockquote:before, section > p blockquote:after {
+  content: "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+  font-size: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  line-height: 0.4em;
+  word-break: break-all;
+  color: #d0dfda;
+  display: block;
+  width: 7px !important;
+  white-space: normal;
+}
+/* end Markdown styles */
+
+table {
+  border-collapse: collapse;
+}
+table td {
+  border: 1px solid #dddddd;
+  padding: 5px 8px;
+}
+.project-table {
+  font-size: 100%;
+}
+.project-table td {
+  vertical-align: top;
+  border: none;
+  padding: 0px;
+}
+.project-table h2 {
+  padding-top: 30px;
+}
+.project-table .image-col {
+  width: 220px;
+  padding-top: 6px;
+}
+
+/* Table of contents */
+.table-of-contents {
+  position: fixed;
+  width: 200px;
+  max-height: 75vh;
+  z-index: 999;
+
+  top: 50%;
+  transform: translate(0, -50%);
+
+  margin-left: -180px;
+  transition: 0.3s;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.table-of-contents:hover {
+  margin-left: 0px;
+  transition: 0.3s;
+
+  overflow-y: scroll;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.table-of-contents li {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.table-of-contents .table-of-contents-list {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.table-of-contents:hover .table-of-contents-list {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.table-of-contents .table-of-contents-abstract-list {
+  visibility: visible;
+}
+.table-of-contents:hover .table-of-contents-abstract-list {
+  visibility: hidden;
+}
+
+.table-of-contents-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.table-of-contents-list li:hover {
+  background-color: #F8F8F8;
+}
+
+.table-of-contents-abstract-list {
+  position: relative;
+}
+
+.table-of-contents-abstract-list .abstract-0 {
+  width: 186px;
+  color: rgba(0, 0, 0, 0);
+
+  box-shadow: inset 0 -2.5px 0 #96ccff;
+}
+
+.table-of-contents-abstract-list .abstract-1 {
+  width: 172px;
+  color: rgba(0, 0, 0, 0);
+
+  box-shadow: inset 0 -2px 0 #96ccff;
+}
+
+.table-of-contents::-webkit-scrollbar-track
+{
+  background-color: #F5F5F5;
+}
+
+.table-of-contents::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb
+{
+  background-color: #0ae;
+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                     color-stop(.5, rgba(255, 255, 255, .2)),
+             color-stop(.5, transparent), to(transparent));
+}
